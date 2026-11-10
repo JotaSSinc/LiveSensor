@@ -1,0 +1,15 @@
+liveSensor — Site compacto e interativo (novembro/2026)
+
+Abra index.html ou envie todos os arquivos para a pasta do site.
+O painel.html disponibiliza o mesmo conteúdo, como na versão anterior.
+
+Alterações desta versão:
+- Redução dos espaçamentos verticais, mantendo legibilidade e layout responsivo.
+- Projetos em carrossel com navegação por setas, por categoria e por toque/deslize.
+- Categorias exibidas em faixa horizontal rolável em dispositivos estreitos.
+- Contato WhatsApp com uma única indicação e os dois números clicáveis:
+  (11) 99534-3532 e (11) 99970-7654.
+- Animações e funcionalidades anteriores preservadas.
+
+Não depende de bibliotecas externas. Mantenha index.html, painel.html,
+styles.css, script.js e a pasta assets no mesmo diretório.
