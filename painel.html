@@ -1,169 +1,202 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#071b35">
-  <meta name="description" content="liveSensor Tecnologia: desenvolvimento de hardware, software embarcado, automação industrial e soluções IoT sob medida.">
-  <title>liveSensor | Desenvolvimento Tecnológico e IoT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141414">
+  <meta name="description" content="liveSensor Tecnologia. Engenharia de hardware, software embarcado, automação industrial e IoT sob medida.">
+  <title>liveSensor | Da leitura à ação</title>
+  <link rel="stylesheet" href="assets/lenis.css">
   <link rel="stylesheet" href="styles.css">
+  <script src="assets/lenis.min.js" defer></script>
   <script src="script.js" defer></script>
 </head>
-<body>
+<body id="topo">
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-  <div class="scroll-progress" aria-hidden="true"></div>
 
-  <header class="site-header" id="topo">
-    <div class="container header-inner">
-      <a class="brand" href="#topo" aria-label="liveSensor Tecnologia — início">
-        <img class="brand-logo" src="assets/logo.png" alt="liveSensor Tecnologia" width="250" height="69">
+  <header class="header">
+    <div class="frame header-inner">
+      <a class="brand" href="#topo" aria-label="liveSensor Tecnologia, início">
+        <img src="assets/logo-3d.png" width="2173" height="724" alt="liveSensor Tecnologia">
       </a>
-
-      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="main-navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-
+      <button class="menu-toggle" type="button" aria-controls="main-navigation" aria-expanded="false" hidden>Menu <span class="menu-mark" aria-hidden="true"></span></button>
       <nav class="main-nav" id="main-navigation" aria-label="Navegação principal">
-        <a class="nav-link" href="#portfolio">Projetos</a>
-        <a class="nav-link" href="#parceiros">Parceiros</a>
-        <a class="nav-link" href="#contato">Contato</a>
-        <a class="nav-contact" href="mailto:contato@livesensor.com.br">Fale com a gente <span aria-hidden="true">↗</span></a>
+        <a href="#portfolio">Projetos</a>
+        <button class="motion-toggle" type="button" aria-pressed="false" hidden>Pausar animações</button>
+        <a href="#parceiros">Parceiros</a>
+        <a class="nav-contact" href="#contato">Fale com a gente <span class="arrow arrow-up-right" aria-hidden="true"></span></a>
       </nav>
     </div>
   </header>
 
-  <main id="conteudo">
-    <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-grid" aria-hidden="true"></div>
-      <div class="hero-pointer-glow" aria-hidden="true"></div>
-      <div class="hero-orb hero-orb-one" aria-hidden="true"></div>
-      <div class="hero-orb hero-orb-two" aria-hidden="true"></div>
-      <div class="container hero-content">
-        <p class="hero-eyebrow"><span class="live-dot" aria-hidden="true"></span> Tecnologia que transforma desafios em soluções</p>
-        <p class="hero-tagline">Quando o mercado não atende sua demanda, nós desenvolvemos a sua solução</p>
-        <h1 id="hero-title">Engenharia de <span class="hero-accent">Software</span> e <span class="hero-accent">Hardware</span></h1>
-        <p class="hero-description">Especialista no desenvolvimento de sistemas embarcados robustos, automação industrial dedicada e soluções avançadas de conectividade IoT.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#contato">Fale Conosco <span aria-hidden="true">↗</span></a>
-          <a class="button button-outline" href="#portfolio">Conheça os Projetos <span aria-hidden="true">↓</span></a>
-        </div>
-        <div class="hero-expertise" aria-label="Áreas de atuação">
-          <span>Hardware</span><span>Software Embarcado</span><span>Automação</span><span>IoT</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="portfolio section" id="portfolio" aria-labelledby="portfolio-title">
-      <div class="container">
-        <div class="section-heading">
-          <div>
-            <p class="section-kicker">SOLUÇÕES REAIS</p>
-            <h2 id="portfolio-title">Portfólio <span>&amp; Cases de Sucesso</span></h2>
+  <main id="conteudo" tabindex="-1">
+    
+    <section class="hero-scroll" aria-labelledby="hero-title">
+      <div class="hero-sticky">
+        <div class="hero-stage frame">
+          <div class="hero-copy">
+            <h1 id="hero-title">Da leitura<br>à <em>ação.</em></h1>
+            <p>Hardware, software e automação sob medida. Conectamos sensores, máquinas e pessoas para transformar sinais em decisões.</p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#portfolio">Explore nossas soluções <span class="arrow arrow-down" aria-hidden="true"></span></a>
+              <a class="hero-contact" href="#contato">Converse com a equipe <span class="arrow arrow-up-right" aria-hidden="true"></span></a>
+            </div>
           </div>
-          <p class="section-intro">Tecnologia desenvolvida para desafios específicos em diferentes setores.</p>
-        </div>
-
-        <div class="projects" id="project-track" role="region" aria-roledescription="carrossel" aria-label="Projetos e soluções da liveSensor" tabindex="0">
-          <article class="project-card" data-category="industria" role="group" aria-roledescription="slide" aria-label="Projeto 1 de 4">
-            <div class="project-media">
-              <img src="assets/Freezer.jpg" alt="Soluções para controle de freezers e geladeiras" width="988" height="524" decoding="async">
+          <div class="signal-scene" aria-label="Representação do fluxo entre sensores, processamento e controle">
+            <canvas id="signal-field" aria-hidden="true"></canvas>
+            <div class="sensor-perspective">
+              <div class="sensor-float">
+                <img class="sensor-emblem" src="assets/sensor-3d.png" alt="Símbolo liveSensor com anéis de titânio e núcleo em cobre" width="1280" height="1280" fetchpriority="high">
+                <span class="sensor-sheen" aria-hidden="true"></span>
+              </div>
             </div>
-            <div class="project-content">
-              <span class="project-number">01 / SOLUÇÃO</span>
-              <p class="project-tag">Indústria de Alimentos e Supermercados</p>
-              <h3>Gerenciamento para Freezer e Geladeiras.</h3>
-              <p>Desenvolvimento completo de hardware e software embarcado para o controle preciso de temperatura, portas abertas, volumetria e energia. A conveniência que o seu condomínio quer com a segurança que os pais exigem: travas inteligentes que blindam o acesso de menores ao álcool.</p>
-            </div>
-          </article>
-
-          <article class="project-card" data-category="automacao" role="group" aria-roledescription="slide" aria-label="Projeto 2 de 4">
-            <div class="project-media">
-              <img src="assets/MBO1.jpg" alt="Sistemas para automação de dobradeiras MBO" width="731" height="274" decoding="async">
-            </div>
-            <div class="project-content">
-              <span class="project-number">02 / SOLUÇÃO</span>
-              <p class="project-tag">Automação &amp; Retrofit</p>
-              <h3>Controlador dobradeira MBO &amp; Dobra Janela</h3>
-              <p>Transforme a eficiência da sua indústria gráfica com automação inteligente: controle de dobradeiras MBO, dobra janela e contadores de passagem monitorados em tempo real via IoT no seu celular ou desktop, garantindo o aumento real da sua produção e o fim do desperdício.</p>
-            </div>
-          </article>
-
-          <article class="project-card" data-category="saude" role="group" aria-roledescription="slide" aria-label="Projeto 3 de 4">
-            <div class="project-media">
-              <img src="assets/CONJUNTO.jpg" alt="Dispositivos de monitoramento multiparamétrico para telemedicina" width="923" height="480" decoding="async">
-            </div>
-            <div class="project-content">
-              <span class="project-number">03 / SOLUÇÃO</span>
-              <p class="project-tag">Tecnologia Médica &amp; IoT</p>
-              <h3>Telemedicina Multi-Parâmetros e Sensores</h3>
-              <p>Eleve o padrão de cuidado da sua instituição com monitoramento clínico inteligente: dispositivos médicos avançados que capturam ECG, temperatura e oxigenação em tempo real, enviando os dados direto para a sua equipe multidisciplinar e integrando a telemedicina à rotina de clínicas, hospitais e casas de repouso.</p>
-            </div>
-          </article>
-
-          <article class="project-card" data-category="seguranca" role="group" aria-roledescription="slide" aria-label="Projeto 4 de 4">
-            <div class="project-media">
-              <img src="assets/PORTARIA.jpg" alt="Equipamentos e interface de controle de acesso em condomínios" width="1003" height="648" decoding="async">
-            </div>
-            <div class="project-content">
-              <span class="project-number">04 / SOLUÇÃO</span>
-              <p class="project-tag">Controle de Acesso</p>
-              <h3>Segurança e Agilidade em Condomínios</h3>
-              <p>Controle de acesso com conexão direta ao apartamento ou ao morador, mesmo que o mesmo não esteja na localidade. Agilizando a comunicação para condômino.</p>
-            </div>
-          </article>
-        </div>
-        <div class="carousel-controls" aria-label="Controles do carrossel de projetos">
-          <p class="carousel-hint">Explore nossos projetos usando as setas ou deslizando para o lado.</p>
-          <div class="carousel-controls-actions">
-            <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Projeto anterior" title="Projeto anterior">&#8592;</button>
-            <output class="carousel-count" id="carousel-count" aria-live="polite" aria-atomic="true">01 / 04</output>
-            <button class="carousel-arrow" type="button" data-carousel-next aria-label="Próximo projeto" title="Próximo projeto">&#8594;</button>
+            <span class="scan-beam" aria-hidden="true"></span>
+            <span class="hud-frame" aria-hidden="true"></span>
+            <dl class="hud-readout" aria-hidden="true">
+              <div><dt>Cursor</dt><dd data-hud="cursor">0,50 · 0,50</dd></div>
+              <div><dt>Rotação</dt><dd data-hud="rot">0,0°</dd></div>
+              <div><dt>Fase</dt><dd data-hud="phase">Captar</dd></div>
+            </dl>
+            <div class="node-label node-input"><span></span>Sensor</div>
+            <div class="node-label node-output"><span></span>Controle</div>
+            <div class="scene-caption">Do sinal físico à operação conectada.</div>
+          </div>
+          <div class="hero-bottom">
+            <ol class="signal-steps" aria-label="Etapas de uma solução conectada">
+              <li class="is-active">Captar</li><li>Processar</li><li>Controlar</li>
+            </ol>
+            <div class="intro-controls"><span>Explore com o scroll <span class="arrow arrow-down" aria-hidden="true"></span></span><button type="button" class="replay-intro" hidden>Rever abertura</button></div>
           </div>
         </div>
       </div>
     </section>
+    <div class="capabilities">
+      <ul class="frame capability-list" aria-label="Áreas de atuação">
+        <li>Hardware</li>
+        <li>Software embarcado</li>
+        <li>Automação industrial</li>
+        <li>IoT</li>
+      </ul>
+    </div>
 
-    <section class="partners section" id="parceiros" aria-labelledby="partners-title">
-      <div class="container">
-        <div class="section-heading section-heading-center">
-          <p class="section-kicker">CONEXÕES QUE GERAM RESULTADOS</p>
-          <h2 id="partners-title">Nossos <span>Parceiros</span></h2>
-        </div>
-        <div class="partners-image">
-          <img src="assets/parceiros.jpg" alt="Logotipos dos parceiros da liveSensor" width="1080" height="424" decoding="async">
-        </div>
+    
+    <section class="portfolio" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="frame section-heading">
+        <h2 id="portfolio-title">Engenharia que<br>entra em operação.</h2>
+        <p>Explore aplicações de hardware e software embarcado em quatro contextos diferentes.</p>
+      </div>
+      <div class="frame projects"><article class="project-section" id="case-mbo" aria-labelledby="mbo-title">
+          <figure class="project-media">
+            <img src="assets/mbo-ilustracao.jpg" alt="Dobradeira de papel industrial com painel de controle e sistema de alimentação" width="1536" height="1024" loading="lazy" decoding="async">
+            <figcaption>Imagem ilustrativa</figcaption>
+          </figure>
+          <div class="project-content">
+            <p class="project-category">Automação gráfica</p><h3 id="mbo-title">Controle para dobradeiras MBO</h3>
+            <p>Retrofit para a indústria gráfica que integra o controle da dobradeira, a dobra janela e os contadores de passagem. A equipe acompanha a produção em tempo real pelo celular ou pelo computador.</p>
+            <ul class="case-details" aria-label="Recursos">
+              <li>Controle de dobra janela</li>
+              <li>Contagem de passagens</li>
+              <li>Monitoramento via IoT</li>
+            </ul><figure class="signal-graph"><figcaption>Pulso e contagem de passagens<span>Simulação visual</span></figcaption><canvas data-graph="pulse" role="img" aria-label="Gráfico ilustrativo de pulso e contagem de passagens"></canvas></figure>
+          </div>
+        </article>
+<article class="project-section" id="case-freezer" aria-labelledby="freezer-title">
+          <figure class="project-media">
+            <img src="assets/freezer-ilustracao.jpg" alt="Freezers comerciais com portas de vidro e sensor instalado junto à porta" width="1536" height="1024" loading="lazy" decoding="async">
+            <figcaption>Imagem ilustrativa</figcaption>
+          </figure>
+          <div class="project-content">
+            <p class="project-category">Controle de refrigeração</p><h3 id="freezer-title">Controle de freezers e geladeiras</h3>
+            <p>Hardware e software embarcado para acompanhar temperatura, abertura de portas, volumetria e consumo de energia. Em lojas de condomínio, travas inteligentes ajudam a restringir o acesso de menores a bebidas alcoólicas.</p>
+            <ul class="case-details" aria-label="Recursos">
+              <li>Temperatura e abertura de portas</li>
+              <li>Volumetria e energia</li>
+              <li>Controle de acesso</li>
+            </ul><figure class="signal-graph"><figcaption>Variação de temperatura<span>Simulação visual</span></figcaption><canvas data-graph="temperature" role="img" aria-label="Gráfico ilustrativo de variação de temperatura"></canvas></figure>
+          </div>
+        </article>
+<article class="project-section" id="case-telemedicina" aria-labelledby="telemedicina-title">
+          <figure class="project-media">
+            <img src="assets/telemedicina-ilustracao.jpg" alt="Monitor multiparamétrico com traçado de ECG e sensor de oxigenação" width="1536" height="1024" loading="lazy" decoding="async">
+            <figcaption>Imagem ilustrativa</figcaption>
+          </figure>
+          <div class="project-content">
+            <p class="project-category">Telemedicina</p><h3 id="telemedicina-title">Monitoramento para telemedicina</h3>
+            <p>Dispositivos para captar ECG, temperatura e oxigenação e encaminhar esses dados em tempo real à equipe de atendimento em clínicas, hospitais e instituições de longa permanência.</p>
+            <ul class="case-details" aria-label="Recursos">
+              <li>ECG e oxigenação</li>
+              <li>Sensores de temperatura</li>
+              <li>Envio de dados em tempo real</li>
+            </ul><figure class="signal-graph"><figcaption>Sinal de monitoramento<span>Simulação visual</span></figcaption><canvas data-graph="ecg" role="img" aria-label="Gráfico ilustrativo de sinal de monitoramento"></canvas></figure>
+          </div>
+        </article>
+<article class="project-section" id="case-portaria" aria-labelledby="portaria-title">
+          <figure class="project-media">
+            <img src="assets/portaria-ilustracao.jpg" alt="Interfone com câmera e leitor de acesso na entrada de um condomínio" width="1536" height="1024" loading="lazy" decoding="async">
+            <figcaption>Imagem ilustrativa</figcaption>
+          </figure>
+          <div class="project-content">
+            <p class="project-category">Controle de acesso</p><h3 id="portaria-title">Controle de acesso em condomínios</h3>
+            <p>Sistema que conecta a portaria diretamente ao apartamento ou ao morador. O morador pode atender mesmo quando está fora do condomínio.</p>
+            <ul class="case-details" aria-label="Recursos">
+              <li>Comunicação com o apartamento</li>
+              <li>Atendimento remoto pelo morador</li>
+            </ul><figure class="signal-graph"><figcaption>Eventos de acesso<span>Simulação visual</span></figcaption><canvas data-graph="access" role="img" aria-label="Gráfico ilustrativo de eventos de acesso"></canvas></figure>
+          </div>
+        </article></div>
+    </section>
+    <section class="partners" id="parceiros" aria-labelledby="partners-title">
+      
+      <div class="frame partners-heading"><h2 id="partners-title">Conexões que<br>viram projetos.</h2><p>Parceiros da liveSensor</p></div>
+      <div class="partner-marquee" aria-label="Logotipos dos parceiros">
+        <div class="partner-belt"><ul class="partner-strip" aria-label="Empresas parceiras">
+          <li><span class="partner-logo" style="--logo-size: 90px; --crop: 126 / 130; --image-width: 857.143%; --image-left: -156.349%; --image-top: -57.692%"><img src="assets/parceiros.jpg" alt="Cândido" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+          <li><span class="partner-logo" style="--logo-size: 134px; --crop: 177 / 94; --image-width: 610.169%; --image-left: -212.994%; --image-top: -42.553%"><img src="assets/parceiros.jpg" alt="Dr.Tele" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+          <li><span class="partner-logo" style="--logo-size: 145px; --crop: 208 / 103; --image-width: 519.231%; --image-left: -275.962%; --image-top: -77.670%"><img src="assets/parceiros.jpg" alt="Unistal" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+          <li><span class="partner-logo" style="--logo-size: 114px; --crop: 153 / 64; --image-width: 705.882%; --image-left: -225.490%; --image-top: -223.438%"><img src="assets/parceiros.jpg" alt="Toft Market" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+          <li><span class="partner-logo" style="--logo-size: 180px; --crop: 309 / 63; --image-width: 349.515%; --image-left: -42.071%; --image-top: -344.444%"><img src="assets/parceiros.jpg" alt="BUU Digital Group" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+          <li><span class="partner-logo" style="--logo-size: 84px; --crop: 144 / 142; --image-width: 750.000%; --image-left: -307.639%; --image-top: -142.254%"><img src="assets/parceiros.jpg" alt="Taco Arte Serviços" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+          <li><span class="partner-logo" style="--logo-size: 96px; --crop: 124 / 76; --image-width: 870.968%; --image-left: -499.194%; --image-top: -251.316%"><img src="assets/parceiros.jpg" alt="U Digital" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+          <li><span class="partner-logo" style="--logo-size: 138px; --crop: 215 / 90; --image-width: 502.326%; --image-left: -277.674%; --image-top: -301.111%"><img src="assets/parceiros.jpg" alt="Marmisco Congelados" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+          <li><span class="partner-logo" style="--logo-size: 104px; --crop: 150 / 109; --image-width: 720.000%; --image-left: -522.667%; --image-top: -144.954%"><img src="assets/parceiros.jpg" alt="Bux Mineiro" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+        </ul><ul class="partner-strip" aria-hidden="true">
+          <li><span class="partner-logo" style="--logo-size: 90px; --crop: 126 / 130; --image-width: 857.143%; --image-left: -156.349%; --image-top: -57.692%"><img src="assets/parceiros.jpg" alt="" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+          <li><span class="partner-logo" style="--logo-size: 134px; --crop: 177 / 94; --image-width: 610.169%; --image-left: -212.994%; --image-top: -42.553%"><img src="assets/parceiros.jpg" alt="" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+          <li><span class="partner-logo" style="--logo-size: 145px; --crop: 208 / 103; --image-width: 519.231%; --image-left: -275.962%; --image-top: -77.670%"><img src="assets/parceiros.jpg" alt="" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+          <li><span class="partner-logo" style="--logo-size: 114px; --crop: 153 / 64; --image-width: 705.882%; --image-left: -225.490%; --image-top: -223.438%"><img src="assets/parceiros.jpg" alt="" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+          <li><span class="partner-logo" style="--logo-size: 180px; --crop: 309 / 63; --image-width: 349.515%; --image-left: -42.071%; --image-top: -344.444%"><img src="assets/parceiros.jpg" alt="" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+          <li><span class="partner-logo" style="--logo-size: 84px; --crop: 144 / 142; --image-width: 750.000%; --image-left: -307.639%; --image-top: -142.254%"><img src="assets/parceiros.jpg" alt="" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+          <li><span class="partner-logo" style="--logo-size: 96px; --crop: 124 / 76; --image-width: 870.968%; --image-left: -499.194%; --image-top: -251.316%"><img src="assets/parceiros.jpg" alt="" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+          <li><span class="partner-logo" style="--logo-size: 138px; --crop: 215 / 90; --image-width: 502.326%; --image-left: -277.674%; --image-top: -301.111%"><img src="assets/parceiros.jpg" alt="" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+          <li><span class="partner-logo" style="--logo-size: 104px; --crop: 150 / 109; --image-width: 720.000%; --image-left: -522.667%; --image-top: -144.954%"><img src="assets/parceiros.jpg" alt="" width="1080" height="424" loading="lazy" decoding="async"></span></li>
+        </ul></div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer" id="contato">
-    <div class="container">
-      <div class="footer-top">
-        <div class="footer-intro">
-          <p class="section-kicker">VAMOS CONVERSAR</p>
-          <h2>Seu próximo projeto começa <span>aqui.</span></h2>
-          <p>Fale com a equipe liveSensor sobre sua necessidade de hardware, software ou automação.</p>
-        </div>
-        <div class="contact-card">
-          <div class="contact-group">
-            <p class="contact-label"><img class="contact-icon" src="assets/email.svg" width="22" height="22" alt="" aria-hidden="true">E-mail</p>
-            <a class="contact-link" href="mailto:contato@livesensor.com.br">contato@livesensor.com.br</a>
-          </div>
-          <div class="contact-group">
-            <p class="contact-label"><img class="contact-icon" src="assets/whatsapp.svg" width="22" height="22" alt="" aria-hidden="true">WhatsApp</p>
-            <div class="whatsapp-numbers" aria-label="Dois números para atendimento via WhatsApp">
-              <a class="whatsapp-number" href="https://wa.me/5511995343532" target="_blank" rel="noopener noreferrer" aria-label="Conversar pelo WhatsApp no número (11) 99534-3532">(11) 99534-3532 <span aria-hidden="true">↗</span></a>
-              <a class="whatsapp-number" href="https://wa.me/5511999707654" target="_blank" rel="noopener noreferrer" aria-label="Conversar pelo WhatsApp no número (11) 99970-7654">(11) 99970-7654 <span aria-hidden="true">↗</span></a>
-            </div>
-          </div>
-        </div>
+  <footer class="footer" id="contato">
+    <div class="frame footer-main">
+      <div>
+        <h2>O que você precisa automatizar?</h2>
+        <p>Conte à equipe liveSensor sobre sua necessidade de hardware, software ou automação.</p>
       </div>
-      <div class="footer-bottom">
-        <span>© <span id="current-year">2026</span> liveSensor Tecnologia. Todos os direitos reservados.</span>
-        <a href="#topo">Voltar ao topo ↑</a>
+      <div class="contact-links">
+        <div class="contact-group">
+          <h3>E-mail</h3>
+          <a href="mailto:contato@livesensor.com.br">contato@livesensor.com.br <span class="arrow arrow-up-right" aria-hidden="true"></span></a>
+        </div>
+        <div class="contact-group">
+          <h3>WhatsApp</h3>
+          <a href="https://wa.me/5511995343532" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (11) 99534-3532">(11) 99534-3532 <span class="arrow arrow-up-right" aria-hidden="true"></span></a>
+          <a href="https://wa.me/5511999707654" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp (11) 99970-7654">(11) 99970-7654 <span class="arrow arrow-up-right" aria-hidden="true"></span></a>
+        </div>
       </div>
     </div>
+    <div class="frame footer-bottom">
+      <small>© <span id="current-year">2026</span> liveSensor Tecnologia</small>
+      <small>Imagens ilustrativas geradas por IA.</small>
+      <a href="#topo">Voltar ao topo <span class="arrow arrow-up" aria-hidden="true"></span></a>
+    </div>
   </footer>
-  <a class="back-to-top" href="#topo" aria-label="Voltar ao topo" title="Voltar ao topo">↑</a>
 </body>
 </html>

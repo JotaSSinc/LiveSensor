@@ -1,15 +1,45 @@
-liveSensor — Site compacto e interativo (novembro/2026)
+liveSensor Tecnologia | Edição Motion
 
-Abra index.html ou envie todos os arquivos para a pasta do site.
-O painel.html disponibiliza o mesmo conteúdo, como na versão anterior.
+Abra index.html no navegador. painel.html oferece a mesma página e mantém
+compatibilidade com a entrega anterior. Imagens, fontes e scripts estão
+incluídos; não é necessário instalar pacotes ou fazer build.
 
-Alterações desta versão:
-- Redução dos espaçamentos verticais, mantendo legibilidade e layout responsivo.
-- Projetos em carrossel com navegação por setas, por categoria e por toque/deslize.
-- Categorias exibidas em faixa horizontal rolável em dispositivos estreitos.
-- Contato WhatsApp com uma única indicação e os dois números clicáveis:
-  (11) 99534-3532 e (11) 99970-7654.
-- Animações e funcionalidades anteriores preservadas.
+Para publicar em hospedagem estática, envie os dois HTMLs, styles.css,
+script.js e a pasta assets, preservando a estrutura. Os contatos abrem
+o aplicativo de e-mail ou o WhatsApp.
 
-Não depende de bibliotecas externas. Mantenha index.html, painel.html,
-styles.css, script.js e a pasta assets no mesmo diretório.
+Esta versão inclui
+- Marca com aparência 3D em titânio e cobre e emblema animado na abertura.
+- Fluxo entre sensor, processamento e controle, com pulsos em canvas.
+- Scroll com inércia via Lenis; toque móvel usa a física do navegador.
+- Quatro projetos em sequência vertical, com parallax e efeitos de imagem.
+- Quatro gráficos animados identificados como simulações visuais.
+- Logos dos parceiros em preto, com movimento horizontal contínuo.
+- Pausa global e respeito à preferência de movimento reduzido.
+
+Controles
+Pausar animações interrompe os movimentos. A faixa de parceiros para também
+ao passar o mouse. Rever abertura repete a composição inicial.
+Com animações desativadas, os parceiros aparecem em uma grade estática.
+
+Conteúdo e fontes
+ENTREGA_4.rar: conteúdo institucional, casos, marca, parceiros e contatos.
+Path Robotics / Studio Freight: referência de direção visual e movimento.
+https://path-robotics.studiofreight.dev/
+https://www.awwwards.com/sites/path-robotics
+
+Imagens e dados
+As imagens dos projetos são ilustrações geradas por IA, não fotografias de
+instalações documentadas. Os gráficos não recebem telemetria real.
+logo-3d.png e sensor-3d.png são PNGs transparentes com aparência
+tridimensional; os movimentos são programados em CSS/JavaScript.
+Os logos dos parceiros usam recortes da imagem original com tratamento
+monocromático. A nitidez é limitada pela resolução dessa fonte.
+Os seis prompts de geração estão em assets/image-provenance.json.
+
+Licenças
+Barlow Condensed: Google Fonts, SIL OFL em assets/OFL-Barlow.txt.
+Lenis 1.3.27: licença MIT em assets/LICENSE-Lenis.txt.
+https://github.com/darkroomengineering/lenis
+
+A edição anterior permanece separada em livesensor-redesign.
