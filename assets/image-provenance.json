@@ -1,0 +1,34 @@
+[
+  {
+    "asset": "mbo-ilustracao.jpg",
+    "generator": "OpenAI ImageGen",
+    "prompt": "Use case: ads-marketing. Create a single photorealistic editorial photograph for the liveSensor industrial engineering website, landscape 3:2. The image is an illustrative generic installation. High-end real industrial photography, almost monochrome warm black and graphite, clean silver edges, one restrained burnt orange accent, crisp subject, natural physical materials and accurate scale, deep shadows with strong subject separation. No logos, text overlays, graphics, borders or watermark. Industrial print finishing shop. Show one plausible floor-standing buckle-plate paper folding machine, wide and low with horizontal metal folding plates, multiple sets of aligned feed rollers and a sheet of white paper visible on the entry conveyor. Three-quarter view from slightly above, solid charcoal panels, a small amber lit control on the right. Machine should fill most of the image, with its top and major working parts visible. Clean manufacturing background recedes into near-black. Not a robotic welding arm, printer or CNC mill."
+  },
+  {
+    "asset": "freezer-ilustracao.jpg",
+    "generator": "OpenAI ImageGen",
+    "prompt": "Use case: ads-marketing. Create a single photorealistic editorial photograph for the liveSensor industrial engineering website, landscape 3:2. The image is an illustrative generic installation. High-end real industrial photography, almost monochrome warm black and graphite, clean silver edges, one restrained burnt orange accent, crisp subject, natural physical materials and accurate scale, deep shadows with strong subject separation. No logos, text overlays, graphics, borders or watermark. Commercial glass-door freezer aisle in a clean grocery back-of-house, close oblique view along the glass with realistic reflections and stainless black trim. Hero object is a small wall-mounted temperature monitoring enclosure and door sensor near the foremost freezer, one tiny amber status light, chilly diffuse white light inside the cabinet. Photographic and understated."
+  },
+  {
+    "asset": "telemedicina-ilustracao.jpg",
+    "generator": "OpenAI ImageGen",
+    "prompt": "Use case: ads-marketing. Create a single photorealistic editorial photograph for the liveSensor industrial engineering website, landscape 3:2. The image is an illustrative generic installation. High-end real industrial photography, almost monochrome warm black and graphite, clean silver edges, one restrained burnt orange accent, crisp subject, natural physical materials and accurate scale, deep shadows with strong subject separation. No logos, text overlays, graphics, borders or watermark. Close editorial still life in a modern clinical room. On the right a generic compact patient vital-sign monitor with modest believable ECG waveform and a pulse oximeter finger clip and neatly arranged leads at front, on a matte graphite work surface. No people, no legible numbers or medical claims. Neutral room light, cool white details and restrained amber accent."
+  },
+  {
+    "asset": "portaria-ilustracao.jpg",
+    "generator": "OpenAI ImageGen",
+    "prompt": "Use case: ads-marketing. Create a single photorealistic editorial photograph for the liveSensor industrial engineering website, landscape 3:2. The image is an illustrative generic installation. High-end real industrial photography, almost monochrome warm black and graphite, clean silver edges, one restrained burnt orange accent, crisp subject, natural physical materials and accurate scale, deep shadows with strong subject separation. No logos, text overlays, graphics, borders or watermark. Architectural close photograph of a slim stainless access intercom with camera and touchless reader attached to a dark vertical post in a modern residential condominium entrance, glass doors and warm lobby blurred behind. Right side and background composed for visual depth, a small amber reader light, no faces."
+  },
+  {
+    "asset": "logo-3d.png",
+    "generator": "OpenAI ImageGen",
+    "reference": "logo.png",
+    "prompt": "Redesign the provided liveSensor Tecnologia logo into a refined premium 3D industrial technology brand lockup. Preserve the exact brand spelling 'liveSensor', lowercase live, uppercase S, and smaller spaced 'TECNOLOGIA' underneath. Keep its recognisable concentric sensor/radar symbol and four diagonally/side connected round terminal nodes on the LEFT. Modernize with precise machined titanium ring geometry, bevelled metallic copper-orange italic wordmark with restrained three-dimensional extrusion and very sharp edges. Full frontal orthographic composition, almost no perspective, horizontal layout 3.8:1 centered with only 6% padding. Typography must be pristine and perfectly legible. Symbol highlights pale silver and orange reflections. Meant to sit on a charcoal black website, so the silver edges should be luminous. Absolutely transparent background, no ground, no shadows outside the mark, no ambient rectangle, no extra symbols. Original image is a brand reference."
+  },
+  {
+    "asset": "sensor-3d.png",
+    "generator": "OpenAI ImageGen",
+    "reference": "logo.png",
+    "prompt": "Extract and redesign ONLY the sensor/radar EMBLEM from the provided liveSensor logo as an exquisite photorealistic machined 3D object. Three concentric brushed titanium rings, inner copper orange disc, four thin machined spokes ending in small circular hollow terminals matching the source emblem. A single physical icon. No words or typography. Three quarter near-frontal perspective about 12 degrees, light silver front surfaces, dark metallic sides, copper inner bevels with precise CNC machining detail and substantial visible depth. Dramatic softbox lighting with orange rim highlights for a near-black web background. Square 1:1 composition, centered and taking 88% of the image. Transparent background. No pedestal, no floor, no visible drop shadow, no surrounding decoration or unrelated parts. Preserve the identifiable sensor symbol of the provided logo."
+  }
+]
